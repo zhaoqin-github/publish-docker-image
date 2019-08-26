@@ -1,5 +1,8 @@
 services: docker
 
+script:
+  - echo "no test"
+
 deploy:
   provider: script
   on:
