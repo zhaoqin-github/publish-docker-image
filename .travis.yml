@@ -6,11 +6,6 @@ script:
 
 deploy:
   provider: script
+  script: ./publish_image.sh
   on:
     tags: true
-  script:
-    - echo "hello"
-    - docker login -u zhaoqin -p $PASSWORD
-    - docker build -t zhaoqin/fluentd:latest .
-    - docker push zhaoqin/fluentd:latest
-    - docker logout
