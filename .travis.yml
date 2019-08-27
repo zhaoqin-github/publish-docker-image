@@ -8,6 +8,8 @@ script:
 deploy:
   provider: script
   script:
+    - echo "line 1"
+    - echo "line 2"
     - ./publish_image.sh
   on:
     tags: true
