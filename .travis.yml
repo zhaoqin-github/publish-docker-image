@@ -5,11 +5,12 @@ script:
   - echo "no test"
   - export NAME=zhaoqin
 
+before_deploy:
+  - echo "line 1"
+  - echo "line 2"
+  - echo "line 3"
 deploy:
   provider: script
-  script:
-    - echo "line 1"
-    - echo "line 2"
-    - ./publish_image.sh
+  script: ./publish_image.sh
   on:
     tags: true
