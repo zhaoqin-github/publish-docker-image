@@ -3,6 +3,7 @@ services: docker
 
 script:
   - echo "no test"
+  - export NAME=zhaoqin
 
 deploy:
   provider: script

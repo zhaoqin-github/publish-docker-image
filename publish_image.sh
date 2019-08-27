@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+echo "my name is $NAME"
+
 TAG=$(git describe --tags --abbrev=0)
 docker login -u zhaoqin -p $PASSWORD
 echo "Building zhaoqin/fluentd:$TAG"
